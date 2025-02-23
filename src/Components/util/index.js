@@ -17,6 +17,7 @@ import {
 } from "../../assets/icons";
 star;
 import { shieldTick } from "../../assets/icons";
+import { data } from "react-router-dom";
 export const navlinks = [
   {
     href: "#Home",
@@ -131,5 +132,32 @@ export const footer = [
   },
   {
     imgURL: instagram,
+  },
+];
+export const help = [
+  {
+    title: "Products",
+    data: [
+      "Air force 1",
+      "Air Max 1",
+      "Air JOrdan 1",
+      "Air Force 2",
+      "Nike walled Race",
+      "Nic Corer ",
+    ],
+  },
+  {
+    title: "Help",
+    data: [
+      "About Us ",
+      "FaQs",
+      "How it works",
+      "Privacy policy",
+      "payment Policy",
+    ],
+  },
+  {
+    title: "Get in touch ",
+    data: [" afghanimran92@gmail.com", "+93789399338"],
   },
 ];

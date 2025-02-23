@@ -1,4 +1,5 @@
 import { footerLogo } from "../assets/images"
+import { help } from "./util"
 import { footer } from "./util"
 import Icons from "./util/Icons"
 function Footer() {
@@ -16,7 +17,23 @@ function Footer() {
       </div>
 
       </div>
-      <div>Hi</div>
+      <div className="flex-1 flex gap-18 max-sm:flex-col">
+        {
+          help.map((item)=>(
+            <div key={item.title}>
+              <h3 className="text-2xl font-mono">{item.title}</h3>
+              <ul>
+                {item.data.map((item)=>(
+                  <li key={item} className="text-gray-600 hover:text-gray-50 cursor-pointer">{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+      <div className="flex  self-end text-gray-600 max-sm:self-center">
+        &copy; All right has reserved 2025 Imran Malakzai
+      </div>
     </footer>
   )
 }
