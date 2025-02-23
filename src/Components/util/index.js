@@ -133,4 +133,3 @@ export const footer = [
     imgURL: instagram,
   },
 ];
-export const co
