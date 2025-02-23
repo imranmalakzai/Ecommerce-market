@@ -1,1 +1,30 @@
 @import "tailwindcss";
+@layer {
+  .shadow {
+    @apply h-25 shadow-xl focus:ring-black rounded-md w-3xs flex justify-center items-center;
+  }
+  .padding-y {
+    @apply py-28;
+  }
+  .padding-x {
+    @apply px-16;
+  }
+  .padding {
+    @apply py-10 px-10;
+  }
+}
+.max-container {
+  max-width: 1440px;
+  margin: 0%;
+}
+.bg-image {
+  background-image: url("../src/assets/images/thumbnail-background.svg");
+  background-position: right;
+  background-size: contain;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
+}
+.bg-color {
+  background-color: rgb(193, 196, 222);
+}
