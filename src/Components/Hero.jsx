@@ -35,7 +35,7 @@ function Hero() {
     </div>
 
     <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-4 bg-color  bg-cover bg-image">
-      <img src={bigShoe}  className="object-contain relative z-10 w-[610px] h-[500px]" alt="shoes1"/>
+      <img src={bigShoe}  className="object-contain max-sm:w-full max-sm:flex-1 relative z-10 w-[610px] h-[500px]" alt="shoes1"/>
       <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%]">
        {
         bigShoes.map((Item,index) => (

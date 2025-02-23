@@ -24,7 +24,7 @@ function Footer() {
               <h3 className="text-2xl font-mono">{item.title}</h3>
               <ul>
                 {item.data.map((item)=>(
-                  <li key={item} className="text-gray-600 hover:text-gray-50 cursor-pointer">{item}</li>
+                  <li key={item} className="text-gray-400 hover:text-gray-50 cursor-pointer">{item}</li>
                 ))}
               </ul>
             </div>
