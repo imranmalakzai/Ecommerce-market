@@ -1,3 +1,4 @@
+import Render from './Render'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { registerLicense } from '@syncfusion/ej2-base'
@@ -5,6 +6,6 @@ registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cW2hIfEx1RHxQdld5ZFRHallYTnNWUj0eQnx
 import './index.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <p className="text-blue-700">Welcome to Afghanistan</p>
+    <Render />
   </StrictMode>,
 )
