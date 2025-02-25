@@ -1,32 +1,32 @@
 import styles from "./style"
-const Render = () => (
-  // Main Components Goes Down Below Here
-  <div className="w-full bg-dark overflow-hidden">
 
-    {/* Navbar Section */}
+import { Billing,CardDeal,Clients,CAT,Footer,Hero,Navbar,States,Testimonials, Business } from "./components";
+
+const Render = () => (
+  <div className="w-full bg-black overflow-hidden">
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
     <div className={`${styles.boxWidth}`}>
-      navbar
+      <Navbar />
     </div>
     </div>
 
-    {/* Hero Section */}
     <div className={`bg-black ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
-          Hero
+          <Hero />
       </div>
     </div>
 
     <div className={`bg-black ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
-      States
-      Business
-      Billing
-      CardDeal
-      Testimonials
-      Clients
-      CTA
-      Footer
+      <States />
+      <Business />
+      <Billing />
+      <CardDeal />
+      <Testimonials />
+      <Clients />
+      <CAT />
+      <Footer/>
+      
       </div>
     </div>
   </div>
