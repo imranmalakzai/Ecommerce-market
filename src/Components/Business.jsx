@@ -12,7 +12,7 @@ function Business() {
     </div>
     <div className='flex flex-col max-w-xl justify-center gap-1.5 max-sm:mb-7 '>
       {features.map((feature)=>(
-        <div className='flex justify-between gap-3 cursor-pointer rounded-2xl px-5 py-6 hover:bg-gray-700 max-sm:px-1 max-sm:py-1.5'>
+        <div key={feature.id} className='flex justify-between gap-3 cursor-pointer rounded-2xl px-5 py-6 hover:bg-gray-700 max-sm:px-1 max-sm:py-1.5'>
           <img src={feature.icon} alt={feature.icon} height={50} width={50} />
           <div>
             <h1 className='font-mono text-2xl'>{feature.title}</h1>
