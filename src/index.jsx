@@ -1,4 +1,4 @@
-import Render from './Render'
+import Render from './Components/Render';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { registerLicense } from '@syncfusion/ej2-base'
