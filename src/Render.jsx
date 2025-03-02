@@ -1,6 +1,15 @@
 import styles from "./style"
+import Billing from "./Components/Billing";
+import CardDeal from "./Components/CardDeal";
+import Clients from "./Components/Clients";
+import CTA from "./Components/CTA";
+import Footer from "./Components/Footer";
+import Hero from "./Components/Hero";
+import Navbar from "./Components/Navbar";
+import States from "./Components/States";
+import Testimonials from "./Components/Testimonials";
+import Business from "./Components/Business";
 
-import { Billing,CardDeal,Clients,CAT,Footer,Hero,Navbar,States,Testimonials, Business } from "./components/index";
 
 const Render = () => (
   <div className="w-full bg-black overflow-hidden">
@@ -24,7 +33,7 @@ const Render = () => (
       <CardDeal />
       <Testimonials />
       <Clients />
-      <CAT />
+      <CTA />
       <Footer/>
       
       </div>
