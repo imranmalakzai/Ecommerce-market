@@ -11,7 +11,7 @@ import {
   s3,
 } from "../assets";
 
-export const services = [
+export const servicesData = [
   {
     id: 1,
     name: support,
