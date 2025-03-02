@@ -1,6 +1,6 @@
 import styles from "./style"
 
-import { Billing,CardDeal,Clients,CAT,Footer,Hero,Navbar,States,Testimonials, Business } from "./components";
+import { Billing,CardDeal,Clients,CAT,Footer,Hero,Navbar,States,Testimonials, Business } from "./components/index";
 
 const Render = () => (
   <div className="w-full bg-black overflow-hidden">
