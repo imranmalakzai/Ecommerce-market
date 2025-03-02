@@ -3,11 +3,14 @@ import { navLinks } from "../Constants"
 import { useState } from "react"
 import { menu } from "../assets"
 import { close } from "../assets"
+import { Outlet } from "react-router-dom"
+import { Link } from "react-router-dom"
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
   return (
-    <div className="w-full bg-[rgba(112,82,212,0.2)] fixed top-0 z-20">
+   <div className="w-full">
+     <div className="w-full bg-[rgba(112,82,212,0.2)] fixed top-0 z-20">
       <div className="px-6 sm:px-16 py-2 xl:max-w-7xl mx-auto w-full">
         <div className="flex flex-row justify-between items-center">
             <img src={logo} alt="logo" width={50} height={50} />
@@ -17,7 +20,9 @@ const Navbar = () => {
                 className={`${active === navLink.name ? 'text-black' : 'text-white'} cursor-pointer
                 text-[16px]  font-serif`}
                 >
-                  {navLink.name}
+                  <Link to={`${navLink.name === 'Home' ? '/' : navLink.name}`}>
+                    {navLink.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -27,7 +32,9 @@ const Navbar = () => {
               <ul className="flex flex-col justify-evenly items-center">
                 {navLinks.map((navLink) => (
                   <li key={navLink.id} onClick={()=>setActive(navLink.name)} className="cursor-pointer hover:text-black">
+                      <Link to={`${navLink.name === 'Home' ? '/' : navLink.name}`}>
                     {navLink.name}
+                  </Link>
                   </li>
                 ))}
             </ul>
@@ -36,6 +43,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+    <Outlet />
+   </div>
   )
 }
 

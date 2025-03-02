@@ -89,7 +89,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    name: "Contact Us",
+    name: "Contact",
   },
 ];
 

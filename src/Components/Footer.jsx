@@ -23,9 +23,6 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div>
-          <h3 className=" border-t-2 pt-2 md:self-end text-gray-800">All Right reserved &copy; 2025 | Imran Malakzai</h3>
-        </div>
       </div>
     </section>
   )
