@@ -1,41 +1,23 @@
-import styles from "../style"
-import GetStarted from "./GetStarted"
-import {robot,discount} from '../assets'
-const Hero = () => (
-    <section id="home" className={`flex md:flex-row flex-col gap-5 text-white ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col x:px-0 sm:px-16 px-6`}>
-        <div className="flex cover justify-center items-center flex-row py-2 px-4 mb-12 rounded-xl">
-          <img src={discount} alt="discount" />
-          <p className="uppercase text-gray">
-         <span className="text-white font-Roboto"> 20% </span> Discount For <span className="text-white">1 month</span> Account
-          </p>
-        </div>
-        <div className="flex justify-between items-center flex-row w-full">
+import { styles } from "../styles"
+import { sliderImg } from "../assets"
+import Button from "./Button"
+const Hero = () => {
+  return (
+    <main className="bg-[#d1e3ff] h-max pt-30">
+      <div className={`${styles.Layout}`}>
+        <div className="w-full flex md:flex-row flex-col items-center justify-evenly ga-10 max-sm:g">
+          <div className="flex flex-col items-start">
+            <h1 className="text-4xl text-cyan font-bold sm:max-w-sm">Repair and Maintenance Services</h1>
+            <p className="text-xl pb-4 font-mono max-w-md mt-4 text-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum voluptatem adipisci. Quos molestiae saepe dicta nobis pariatur, tempora iusto, ad possimus soluta hic praesentium mollitia consequatur beatae, aspernatur culpa.</p>
+            <Button Text={"Contact US"}/>
+          </div>
           <div>
-          <h1 className="flex-1 font-semibold font-mono sm:text-7xl text-[52px]">
-            The Next
-            <br className="sm:block hidden" />
-            <span className="text-gradient"> Generation
-            </span>
-            <br />
-            Payment Method
-          </h1>
-          <p className="mt-4 font-mono text-gray-300 max-w-sm">
-          Our team of experts uses a methodology to identify the credit cards most likely to fit your need.We examine annual percentage rates, annual fees.
-          </p>
-          </div>
-          <div className="">
-          <GetStarted />
+            <img src= {sliderImg} alt="slider" className="max-h-full" />
           </div>
         </div>
       </div>
-      <div className="flex-1 flex">
-        <img src={robot} alt="banner" className="w-full h-full relative z-50 max-sm:mt-20" />
-        <div className="absolute z-0 w-[40%] h-[35%] top-0 pink__gradient"></div>
-        <div className="absolute z-0 w-[50%] h-[50%] right-20 bottom-20 blue__gradient"></div>
-
-      </div>
-    </section>
-)
+    </main>
+  )
+}
 
 export default Hero

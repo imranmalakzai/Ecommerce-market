@@ -1,36 +1,34 @@
-import React from 'react'
-import { logo } from '../assets'
-import { socialMedia } from '../constants'
-import { footerLinks } from '../constants'
-import Info from './Info'
-
-const Footer = () => (
-  <>
-  <footer className='flex max-md:flex-col flex-row mt-10 py-10 gap-10'>
-    <div className='text-white flex flex-col gap-5'>
-       <img src={logo} alt="logo" width={200} height={200} />
-       <p className='max-w-80 text-gray-300'>A new way to make the payments easy, reliable and secure.</p>
-    </div>
-    <div className='flex text-white justify-between flex-1 max-w-[90%] flex-wrap'>
-      {footerLinks.map((footerLink,index)=>(
-        <div key={index}>
-          <h4 className='font-bold'>{footerLink.title}</h4>
-          <ul>
-          {footerLink.links.map((footer,index)=>(
-            <li key={index} className='text-gray-300 hover:text-cyan-400'>
-              <a href={footer.link}>
-                {footer.name}
-              </a>
-            </li>
-          ))}
-          </ul>
+import { styles } from "../styles"
+import { logo } from "../assets"
+import { footerLinks } from "../Constants"
+const Footer = () => {
+  return (
+    <section className={`${styles.Layout} bg-[#d1e3ff]`}>
+      <div className="w-full py-7 flex flex-row justify-between items-center max-md:flex-col">
+        <div className="flex sm:flex-col">
+          <img src={logo} alt="logo" className="w-[80px] h-[50px]" />
+          <p className="text-gray-600 max-w-sm">
+          The World Famous and Best construction and Web dev in the History we provide the biggest sport in Decade
+          </p>
         </div>
-      ))}
-    </div>
-  </footer>
-  <Info />
-  
-  </>
-)
+        <div className="flex sm:flex-row flex-col gap-5">
+          {footerLinks.map((footer)=>(
+            <div key={footer.id}>
+              <h1 className="text-2xl font-mono font-semibold">{footer.title}</h1>
+              <ul>
+                {footer.data.map((data,index)=>(
+                  <li className="text-gray-700 cursor-pointer hover:text-cyan" key={index}>{data}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <div>
+          <h3 className=" border-t-2 pt-2 md:self-end text-gray-800">All Right reserved &copy; 2025 | Imran Malakzai</h3>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default Footer

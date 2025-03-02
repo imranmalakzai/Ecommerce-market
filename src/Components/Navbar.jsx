@@ -1,37 +1,42 @@
-import {logo,close,menu} from '../assets'
-import { useState } from 'react';
-import {navLinks} from '../constants/index'
-
-function Navbar() {
-  const [toggle, setToggle] = useState(false);
+import { logo } from "../assets"
+import { navLinks } from "../Constants"
+import { useState } from "react"
+import { menu } from "../assets"
+import { close } from "../assets"
+const Navbar = () => {
+  const [active, setActive] = useState('')
+  const [toggle, setToggle] = useState(false)
   return (
-    <nav className='w-full flex justify-between items-center py-6'>
-      <img src={logo} alt='hoobank' className='h-8 w-32' />
-      <ul className='sm:flex hidden  flex-1 justify-between max-w-[20rem] text-white items-center list-none non'>
-        {navLinks.map((nav)=>(
-          <li className='font-normal hover:text-blue-600 z-100' key={nav.id}>
-            <a href={`#${nav.title}`}>
-              {nav.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
-        <img src={toggle ? close : menu} alt='menu' className='w-6 h-6 cursor-pointer text-3xl' onClick={()=>setToggle(prev =>!prev)} />
-        <div className={`${toggle ? 'flex' : 'hidden'} absolute right-4 top-20`}>
-        <ul className='text-white sm:hidden  flex flex-col items-center list-none min-h-[200px] sidebar bg-gradient-to-tl from-black to-gray-500 rounded-xl min-w-[10rem] justify-center gap-4 non z-40'>
-          {navLinks.map((nav)=>(
-            <li className='font-normal hover:text-blue-600' key={nav.id}>
-              <a href={`#${nav.title}`}>
-                {nav.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-          </div>
+    <div className="w-full bg-[rgba(112,82,212,0.2)] fixed top-0 z-20">
+      <div className="px-6 sm:px-16 py-2 xl:max-w-7xl mx-auto w-full">
+        <div className="flex flex-row justify-between items-center">
+            <img src={logo} alt="logo" width={50} height={50} />
+            <ul className="flex gap-10 max-md:hidden">
+              {navLinks.map((navLink) => (
+                <li key={navLink.id} onClick={()=>setActive(navLink.name)}
+                className={`${active === navLink.name ? 'text-black' : 'text-white'} cursor-pointer
+                text-[16px]  font-serif`}
+                >
+                  {navLink.name}
+                </li>
+              ))}
+            </ul>
+            <div className="md:hidden flex justify-end">
+              <img src={toggle ? close : menu} alt="toggle" width={35} height={35} className="cursor-pointer"   onClick={()=> setToggle((prev) =>!prev)} />
+              <div className={`${toggle ? 'block' : 'hidden'} sidebar absolute top-[60px] w-[150px] rounded-xl  h-[200px] justify-center flex bg-[rgba(0,0,0,0.3)] text-white`}>
+              <ul className="flex flex-col justify-evenly items-center">
+                {navLinks.map((navLink) => (
+                  <li key={navLink.id} onClick={()=>setActive(navLink.name)} className="cursor-pointer hover:text-black">
+                    {navLink.name}
+                  </li>
+                ))}
+            </ul>
+              </div>
+            </div>
+        </div>
       </div>
-    </nav>
+    </div>
   )
-} 
- 
+}
+
 export default Navbar

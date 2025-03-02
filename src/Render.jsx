@@ -1,44 +1,20 @@
-import styles from "./style"
-import Billing from "./Components/Billing";
-import CardDeal from "./Components/CardDeal";
-import Clients from "./Components/Clients";
-import CTA from "./Components/CTA";
-import Footer from "./Components/Footer";
-import Hero from "./Components/Hero";
-import Navbar from "./Components/Navbar";
-import States from "./Components/States";
-import Testimonials from "./Components/Testimonials";
-import Business from "./Components/Business";
+import {Navbar,Hero,Services,Clients,Contact,Footer, About} from './Components'
+import Profession from './Components/Profession'
 
-
-const Render = () => (
-  <div className="w-full bg-black overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-    <div className={`${styles.boxWidth}`}>
+const Render = () => {
+  return (
+    <div className="w-full">
       <Navbar />
-    </div>
-    </div>
-
-    <div className={`bg-black ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-          <Hero />
-      </div>
-    </div>
-
-    <div className={`bg-black ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-      <States />
-      <Business />
-      <Billing />
-      <CardDeal />
-      <Testimonials />
+      <Hero />
+      <About />
+      <Services />
+      <Profession />
       <Clients />
-      <CTA />
-      <Footer/>
-      
-      </div>
+      <Contact />
+      <Footer />
+
     </div>
-  </div>
-) 
+  )
+}
 
 export default Render

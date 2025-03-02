@@ -133,7 +133,12 @@
     transform: translateY(0);
   }
 }
-
+.mx {
+  margin-inline: auto;
+}
+.bg-hero-pattern {
+  background-image: url("../src/assets/herobg.png");
+}
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
