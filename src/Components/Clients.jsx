@@ -7,25 +7,25 @@ function Clients() {
     {
       id: 1,
       name: "Albirt Hussain",
-      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opportunity about the good part of this",
       imgURL: client1,
     },
     {
       id: 1,
       name: "Bob Logan",
-      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opportunity about the good part of this",
       imgURL: client2,
     },
     {
       id: 1,
       name: "Shanchen hio",
-      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opportunity about the good part of this",
       imgURL: people01,
     },
   ];
   
   return (
-    <section className={`${styles.Layout} mt-15 mb-15`}>
+    <section className={`${styles.Layout} mt-15 mb-15 max-w-7xl`}>
         <div className="flex flex-col justify-between items-center">
           <h1 className="text-3xl font-semibold">What Our <span className="text-cyan">
           Clients</span> Say About US ?</h1>
@@ -43,7 +43,6 @@ function Clients() {
                   <img src={Star} alt="star" height={20} width={20} /> 
                   <p>4.5</p>
                   </div>
-                  
                    </div>
                   </div>
                 </div>
