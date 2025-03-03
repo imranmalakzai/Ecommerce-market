@@ -1,8 +1,29 @@
 import { quotes } from "../assets"
 import { Star } from "../assets"
 import { styles } from "../styles"
-import { data as clientsData } from "../Constants"
+import { client1,client2,people01 } from "../assets";
 function Clients() {
+  const clientsData = [
+    {
+      id: 1,
+      name: "Albirt Hussain",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      imgURL: client1,
+    },
+    {
+      id: 1,
+      name: "Bob Logan",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      imgURL: client2,
+    },
+    {
+      id: 1,
+      name: "Shanchen hio",
+      idea: "The work of this companey is Amazing I would like to thanks every one about the best opertunity about the good part of this",
+      imgURL: people01,
+    },
+  ];
+  
   return (
     <section className={`${styles.Layout} mt-15 mb-15`}>
         <div className="flex flex-col justify-between items-center">

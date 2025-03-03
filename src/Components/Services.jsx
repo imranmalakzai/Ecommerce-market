@@ -1,6 +1,29 @@
 import {styles} from '../styles'
-import { servicesData } from '../Constants'
+import { support,truckFast,shieldTick } from '../assets';
 const Services = () => {
+   const servicesData = [
+    {
+      id: 1,
+      name: support,
+      title: "Support",
+      about:
+        "We provide the best frond-end and backend for all the types of our products if you interested contact us",
+    },
+    {
+      id: 2,
+      name: truckFast,
+      title: "truckFast",
+      about:
+        "we provide the best way for carry our product to all around the world I would be happy to know which kinds transition your like",
+    },
+    {
+      id: 3,
+      name: shieldTick,
+      title: "shieldTick",
+      about:
+        "We provide the best frond-end and backend for all the types of our products if you interested contact us",
+    },
+  ];
   return (
     <section className={`${styles.Layout} mt-20`}>
       <div className='flex justify-center gap-16 flex-wrap'>

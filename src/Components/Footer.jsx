@@ -1,7 +1,30 @@
 import { styles } from "../styles"
 import { logo } from "../assets"
-import { footerLinks } from "../Constants"
 const Footer = () => {
+  const footerLinks = [
+    {
+      id: 1,
+      title: "Help",
+      data: [
+        "About US",
+        "FaQs",
+        "How it works",
+        "Privacy Policy",
+        "Payment Policy",
+      ],
+    },
+    {
+      id: 2,
+      title: "Products",
+      data: ["Construction", "Web Dev", "Front end", "Backend", "Full Stock"],
+    },
+    {
+      id: 3,
+      title: "Get in Touch",
+      data: ["afghanimran92@gmail.com", "+93789399338"],
+    },
+  ];
+  
   return (
     <section className={`${styles.Layout} bg-[#d1e3ff]`}>
       <div className="w-full py-7 flex flex-row justify-between items-center max-md:flex-col">

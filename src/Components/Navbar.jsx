@@ -1,5 +1,4 @@
 import { logo } from "../assets"
-import { navLinks } from "../Constants"
 import { useState } from "react"
 import { menu } from "../assets"
 import { close } from "../assets"
@@ -8,6 +7,26 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
   const [active, setActive] = useState('')
   const [toggle, setToggle] = useState(false)
+ const navLinks = [
+    {
+      id: 1,
+      name: "Home",
+    },
+    {
+      id: 2,
+      name: "About",
+    },
+    {
+      id: 3,
+      name: "Services",
+    },
+    {
+      id: 4,
+      name: "Contact",
+    },
+  ];
+  
+
   return (
    <div className="w-full">
      <div className="w-full bg-[rgba(112,82,212,0.2)] fixed top-0 z-20">
