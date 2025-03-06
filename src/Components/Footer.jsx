@@ -26,8 +26,8 @@ const Footer = () => {
   ];
   
   return (
-    <section className={`${styles.Layout} bg-[#d1e3ff]`}>
-      <div className="w-full py-7 flex flex-row justify-between items-center max-md:flex-col">
+    <section className={`${styles.Layout} bg-gradient-to-b from-indigo-300 to-pink-200 cursor-pointer`}>
+      <div className="w-full py-7 flex flex-row justify-between items-center max-md:flex-col xl:max-w-7xl mx-auto">
         <div className="flex sm:flex-col">
           <img src={logo} alt="logo" className="w-[80px] h-[50px]" />
           <p className="text-gray-600 max-w-sm">

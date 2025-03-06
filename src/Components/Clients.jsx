@@ -32,7 +32,7 @@ function Clients() {
           <div className="flex-1 w-full flex justify-between flex-wrap mt-5">
              {
               clientsData.map((client)=>(
-                <div className="shadow-2xl p-13 rounded-2xl">
+                <div className="shadow-2xl p-13 rounded-2xl hover:bg-gradient-to-r from-indigo-300 to-pink-200 transition-all duration-200 cursor-pointer">
                   <img src={quotes} alt="quotes" />
                   <p className="max-w-[270px] mt-1">{client.idea}</p>
                   <div className="flex items-center gap-4 mt-5">

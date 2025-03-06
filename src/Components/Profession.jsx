@@ -3,10 +3,10 @@ import Button from './Button'
 import { professionalImg } from '../assets'
 function Profession() {
   return (
-    <section className={`${styles.Layout} bg-[#d1e3ff] mt-25 py-10`}>
+    <section className={`${styles.Layout} bg-gradient-to-t from-blue-50 to-indigo-300 mt-25 py-10`}>
       <div className='flex justify-center items-center max-md:flex-col'>
           <img src={professionalImg} alt="img" />
-        <div>
+        <div className='flex flex-col justify-center items-start'>
           <h1 className='text-cyan font-bold text-3xl font-mono max-w-md'>    
               We Provide Professional
               Home Services.

@@ -2,7 +2,7 @@
 import { styles } from "../styles"
 const Contact = () => {
   return (
-    <section className={`${styles.Layout} mt-20 mb-20`}>
+    <section className={`${styles.Layout} mt-20 mb-20 max-w-7xl`}>
       <div className="flex md:flex-row flex-col max-md:justify-center gap-16 items-center">
         <h1 className="text-3xl font-semibold">Sing Up For <span className="text-cyan">Updates</span> <br  className="hidden md:block"/> & NewsLatter</h1>
         <div className="border flex-1 rounded-full flex justify-between px-2 items-center hover:shadow-2xl">

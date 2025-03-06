@@ -28,7 +28,7 @@ const Services = () => {
     <section className={`${styles.Layout} mt-20`}>
       <div className='flex justify-center gap-16 flex-wrap'>
         {servicesData.map((prev)=>(
-          <div key={prev.id} className='flex flex-col  shadow-2xl p-8 justify-center rounded-2xl'>
+          <div key={prev.id} className='flex flex-col  shadow-2xl p-8 justify-center rounded-2xl hover:bg-gradient-to-r from-indigo-300 to-pink-200 cursor-pointer'>
             <div className='flex gap-2 items-center mb-2'>
             <img src={prev.name} alt='collection' className='bg-cyan p-2 rounded-full w-10 h-10' />
             <h1 className='font-mono text-3xl'>{prev.title}</h1>
