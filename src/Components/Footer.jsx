@@ -1,53 +1,40 @@
-import { styles } from "../styles"
-import { logo } from "../assets"
-const Footer = () => {
-  const footerLinks = [
-    {
-      id: 1,
-      title: "Help",
-      data: [
-        "About US",
-        "FaQs",
-        "How it works",
-        "Privacy Policy",
-        "Payment Policy",
-      ],
-    },
-    {
-      id: 2,
-      title: "Products",
-      data: ["Construction", "Web Dev", "Front end", "Backend", "Full Stock"],
-    },
-    {
-      id: 3,
-      title: "Get in Touch",
-      data: ["afghanimran92@gmail.com", "+93789399338"],
-    },
-  ];
-  
+import { footerLogo } from "../assets/images"
+import { help } from "./util"
+import { footer } from "./util"
+import Icons from "./util/Icons"
+function Footer() {
   return (
-    <section className={`${styles.Layout} bg-gradient-to-b from-indigo-300 to-pink-200 cursor-pointer`}>
-      <div className="w-full py-7 flex flex-row justify-between items-center max-md:flex-col xl:max-w-7xl mx-auto">
-        <div className="flex sm:flex-col">
-          <img src={logo} alt="logo" className="w-[80px] h-[50px]" />
-          <p className="text-gray-600 max-w-sm">
-          The World Famous and Best construction and Web dev in the History we provide the biggest sport in Decade
-          </p>
-        </div>
-        <div className="flex sm:flex-row flex-col gap-5">
-          {footerLinks.map((footer)=>(
-            <div key={footer.id}>
-              <h1 className="text-2xl font-mono font-semibold">{footer.title}</h1>
+    <footer className="bg-black w-full flex max-sm:flex-col gap-16 min-h-20 text-white justify-between items-center padding">
+      <div className="flex flex-col gap-5">
+      <img src={footerLogo} alt="footer" width={140} height={140} />
+      <p className="capitalize max-w-sm text-gray-400 text-xl">the world famous and best shoes in The history We provide The biggest Sport Shoes in the Decade!</p>
+      <div className="flex gap-8">
+        {
+          footer.map((footer,key)=>(
+            <Icons key={key} {...footer} />
+          ))
+        }
+      </div>
+
+      </div>
+      <div className="flex-1 flex gap-18 max-sm:flex-col">
+        {
+          help.map((item)=>(
+            <div key={item.title}>
+              <h3 className="text-2xl font-mono">{item.title}</h3>
               <ul>
-                {footer.data.map((data,index)=>(
-                  <li className="text-gray-700 cursor-pointer hover:text-cyan" key={index}>{data}</li>
+                {item.data.map((item)=>(
+                  <li key={item} className="text-gray-400 hover:text-gray-50 cursor-pointer">{item}</li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
+          ))
+        }
       </div>
-    </section>
+      <div className="flex  self-end text-gray-600 max-sm:self-center">
+        &copy; All right has reserved 2025 Imran Malakzai
+      </div>
+    </footer>
   )
 }
 
