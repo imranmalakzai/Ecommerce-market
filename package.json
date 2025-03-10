@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -23,6 +24,7 @@
     "@syncfusion/ej2-react-richtexteditor": "^28.2.6",
     "@syncfusion/ej2-react-schedule": "^28.2.6",
     "@tailwindcss/vite": "^4.0.7",
+    "axios": "^1.8.1",
     "express": "^4.21.2",
     "framer-motion": "^12.4.7",
     "react": "^19.0.0",
