@@ -1,11 +1,16 @@
-import Render from './Render'
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { registerLicense } from '@syncfusion/ej2-base'
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cW2hIfEx1RHxQdld5ZFRHallYTnNWUj0eQnxTdEBjW35XcHRUQ2RaWE1+Wg==');  // Replace with your actual key
-import './index.css'
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Render />
-  </StrictMode>,
+import React from "react";
+import ReactDom from "react-dom/client"
+import "./index.css"
+import { Toaster } from "react-hot-toast";
+
+
+/**Injected To index.html */
+const router = ReactDom.createRoot(document.getElementById("root"))
+
+/**Display down below */
+router.render(
+  <React.StrictMode>
+    <h3>Hello, How are you what is your name</h3>
+    <Toaster />
+  </React.StrictMode>
 )
