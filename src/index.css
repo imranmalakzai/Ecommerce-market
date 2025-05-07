@@ -22,23 +22,11 @@
   --color-light: #f8f9fa;
   --color-dark: #212529;
 }
+
 * {
   scroll-behavior: smooth;
 }
 
-img {
-  transition: 1s;
-}
-.bg {
-  background-image: url("../src/Assets/images/blueBack.jpg");
-  height: 1000px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid black;
-  width: full;
-  top: 0px;
-}
 .sidebar {
   -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
