@@ -23,6 +23,14 @@
   --color-dark: #212529;
 }
 
+@theme {
+  --color-primary: #4fbf8b;
+  --color-primary-dull: #44ae7c;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 * {
   scroll-behavior: smooth;
 }
@@ -55,5 +63,4 @@
 }
 .cursive {
   font-family: cursive;
-  color: white;
 }
