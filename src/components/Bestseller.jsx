@@ -7,7 +7,7 @@ function Bestseller() {
   return (
     <div className="mt-16">
       <p className="font-medium text-2xl md:text-3xl mb-2">Best Sellers</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  ">
+      <div className="grid py-2 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5  ">
         {
           products?.filter(product => product.inStock).slice(0,5).map((item,key) => {
             return  <ProductCard key={key} product={item} />
